@@ -13,12 +13,12 @@ const pool = mysql2.createPool({
 const checkConnection = async () => {
   try {
     const connection = await pool.getConnection();
-    console.error("Database Connection Successfuk!");
+    console.log("Database Connection Successful!");
     connection.release();
   } catch (error) {
-    console.log("Error connecting to database");
+    console.error("Error connecting to database");
     throw error;
   }
 };
 
-export { pool as db, checkConnection };
+export { pool, checkConnection };``
