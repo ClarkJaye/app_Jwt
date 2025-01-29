@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import { checkConnection } from "./src/config/db.js";
 // import createAllTable from "./src/utils/dbUtils.js";
 import userRoutes from "./src/routes/userRoutes.js";
-import postRoutes from "./src/routes/postRoutes.js";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
@@ -18,7 +17,6 @@ app.use(cors({
 }));
 
 app.use("/user", userRoutes);
-app.use("/post", postRoutes);
 
 // Start server
 const PORT = process.env.PORT || 8081;
