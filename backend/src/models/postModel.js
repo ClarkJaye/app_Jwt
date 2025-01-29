@@ -1,8 +1,9 @@
-class postModel{
-    constructor(post){
-        this.id = post.id;
+class postModel {
+    constructor(post) {
         this.content = post.content;
-        this.user_id = user.user_id;
+        this.userName = post.userName;
+        this.user_id = post.user_id;
+        this.created_at = post.created_at || new Date();
     }
 }
 
