@@ -2,6 +2,7 @@ import { pool } from "../config/db.js";
 
 const userTableQuery = `CREATE TABLE IF NOT EXISTS users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100),
     email VARCHAR(100) NOT NULL UNIQUE,
     mobile VARCHAR(15),
     password VARCHAR(225),
